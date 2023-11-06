@@ -13,10 +13,9 @@
     },
     "plugins": ["react"],
     "rules": {
-      // Reglas personalizadas aquí
-  
-      // Ejemplo: Permitir consolas en el entorno de desarrollo
-      "no-console": "off"
+      "no-console": "off",
+      "react/react-in-jsx-scope": "off",
+      "react/no-unknown-property": "off"
     },
     "settings": {
       "react": {
