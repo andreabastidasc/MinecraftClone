@@ -30,8 +30,7 @@ export const TextureSelector = () => {
             const [textureName] = selectedTexture;
             setTexture(textureName);
         }
-
-        console.log(selectedTexture, 'HOLKA')
+        
     }, [dirt, glass, grass, wood, log])
 
     return null;
