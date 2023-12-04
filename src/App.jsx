@@ -5,6 +5,7 @@ import { Ground } from './components/Ground'
 import { PointView } from './components/PointView'
 import { Player } from "./components/Player";
 import { Cubes } from './components/Cubes'
+import { TextureSelector } from './components/TextureSelector'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
             <div className='pointer'>
                 +
             </div>
+            <TextureSelector />
         </>
     );
 }
