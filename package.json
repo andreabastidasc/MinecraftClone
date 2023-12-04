@@ -13,9 +13,11 @@
     "@react-three/cannon": "6.6.0",
     "@react-three/drei": "9.88.0",
     "@react-three/fiber": "8.14.5",
+    "nanoid": "5.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "three": "0.157.0"
+    "three": "0.157.0",
+    "zustand": "4.4.7"
   },
   "devDependencies": {
     "@types/react": "^18.2.28",
