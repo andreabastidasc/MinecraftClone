@@ -29,6 +29,7 @@ https://minecraft-but-cooler.netlify.app/
 
 - React: JavaScript library for building user interfaces.
 - Vite: Fast development server and bundler.
+- Vite: A lightweight 3D library to add a new dimension to your gaming experience.
 - Other dependencies (listed in `package.json`).
 
 ## Contact
