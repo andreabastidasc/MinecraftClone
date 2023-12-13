@@ -3,8 +3,16 @@ import { useStore } from "../hooks/useStore";
 import * as images from '../images/images';
 import { useKeyboard } from "../hooks/useKeyboard";
 
+const textureImages = {
+    dirt: images.dirtImg,
+    grass: images.grassImg,
+    glass: images.glassImg,
+    wood: images.woodImg,
+    log: images.logImg
+}
+
 export const TextureSelector = () => {
-    const [visible, setVisible] = useState(false);
+    const [visible, setVisible] = useState(true);
     const [texture, setTexture] = useStore(state => [state.texture, state.setTexture]);
 
     const {
@@ -15,16 +23,16 @@ export const TextureSelector = () => {
         log
     } = useKeyboard();
 
-    useEffect(() => {
-        const options = {
-            dirt,
-            grass,
-            glass,
-            wood,
-            log
-        }
+    const textures = {
+        dirt,
+        grass,
+        glass,
+        wood,
+        log
+    }
 
-        const selectedTexture = Object.entries(options).find(([texture, isEnabled]) => isEnabled);
+    useEffect(() => {
+        const selectedTexture = Object.entries(textures).find(([texture, isEnabled]) => isEnabled);
         
         if (selectedTexture) {
             const [textureName] = selectedTexture;
@@ -33,5 +41,25 @@ export const TextureSelector = () => {
         
     }, [dirt, glass, grass, wood, log])
 
-    return null;
+    if (!visible) return null;
+
+    return (
+        <div className="texture-selector">
+            {
+                Object
+                    .entries(textureImages)
+                    .map(([imgKey, img]) => {
+                        return (
+                            <img
+                                className={texture === imgKey.replace('Img', '') ? 'selected' : ''}
+                                key={imgKey}
+                                src={img}
+                                alt={imgKey}
+                                onClick={() => setTexture(imgKey.replace('Img', ''))}
+                            />
+                        )
+                    })
+            }
+        </div>
+    );
 }

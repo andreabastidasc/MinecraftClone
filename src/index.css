@@ -38,3 +38,29 @@ body {
   transform: translate(-50%, -50%);
   opacity: .5;
 }
+
+.texture-selector {
+  display: flex;
+  position: absolute;
+  gap: 2rem;
+  top: 80%;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+  width: 354px;
+  padding: 12px;
+  border: 1px solid gainsboro;
+  background-color: rgb(89 89 89 / 53%);
+}
+
+.texture-selector img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  image-rendering: pixelated;
+}
+
+.texture-selector img.selected {
+  border: 3px solid brown;
+}

@@ -5,7 +5,7 @@ import { useStore } from "../hooks/useStore";
 export function Ground() {
     const [ref] = usePlane(() => ({
         rotation: [-Math.PI / 2, 0, 0],
-        position: [0, 0.5, 0],
+        position: [0, -0.5, 0],
     }));
 
     const [addCube] = useStore(state => [state.addCube]);
