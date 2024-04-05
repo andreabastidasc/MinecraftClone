@@ -104,3 +104,45 @@ body {
   -ms-transition: background-color 300ms ease-in-out;
   transition: background-color 300ms ease-in-out;
 }
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 99999999;
+  background-color: #17b705;
+  border: 3px solid black;
+  max-width: 400px;
+  padding: 20px 10px;
+  font-family: 'VT323', monospace;
+  font-size: 22px;
+  height: 150px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 50vmax rgba(0,0,0,.5);
+}
+
+.modal p {
+  margin: 0;
+  text-align: center;
+}
+
+.modal button {
+  font-family: 'VT323', monospace;
+  font-size: 22px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.modal-button-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
